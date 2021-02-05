@@ -15,48 +15,80 @@
     </div>
 </div>
 @section('js')
-    <script type="text/javascript">
-        var modal = $('#basicModal');
-        var modalBody = modal.find('.modal-body');
+<script type="text/javascript">
+    var modal = $('#basicModal');
+    var modalBody = modal.find('.modal-body');
 
-        function showBasicModal(title, url) {
-            modalBody.html('');
-            modal.find('.modal-title').html(title);
-            $.ajax({
-                'url': url,
-                'dataType': 'json',
-                success: function(response) {
-                    modalBody.html(response.html);
-                    $(modal).modal();
-                },
-                error: function(error) {
-                    console.log(error);
+    function showBasicModal(title, url) {
+        modalBody.html('');
+        modal.find('.modal-title').html(title);
+        $.ajax({
+            'url': url
+            , 'dataType': 'json'
+            , success: function(response) {
+                modalBody.html(response.html);
+                $(modal).modal();                
+            }
+            , error: function(error) {
+                console.log(error);
+                toastr.error('Something went wrong.');
+            }
+        });
+    }
+
+    function saveBasicModalFrm(frm) {
+        $(frm).find('.error').html('');
+        $.ajax({
+            'url': $(frm).attr('action')
+            , 'type': $(frm).attr('method')
+            , 'data': $(frm).serialize()
+            , 'dataType': 'json'
+            , success: function(response) {
+                if (response.status == 1) {
+                    $(modal).modal('hide');
+                    table.ajax.reload();
                 }
-            });
-        }
+                toastr.success(response.msg);
+            }
+            , error: function(error) {
+                $.each(error.responseJSON.errors, function(key, value) {
+                    $('#' + key + '-error').html(value);
+                });
+                toastr.error(error.responseJSON.errors);
+            }
+        });
+        return false;
+    }
 
-        function saveBasicModalFrm(frm) {
-            $(frm).find('.error').html('');
-            $.ajax({
-                'url': $(frm).attr('action'),
-                'type': $(frm).attr('method'),
-                'data': $(frm).serialize(),
-                'dataType': 'json',
-                success: function(response) {
-                    if (response.status == 1) {
-                        $(modal).modal('hide');
-                    }
-                    alert(response.msg);
-                },
-                error: function(error) {
-                    $.each(error.responseJSON.errors, function(key, value) {
-                        $('#' + key + '-error').html(value);
-                    });
-                    console.log(error.responseJSON.errors);
+    $(document).on('submit', '#saveBasicModalFrm', function(e) {
+        e.preventDefault();
+        $(this).find('.error').html('');
+        var formData = new FormData(this);
+        $.ajax({
+            url: $(this).attr('action')
+            , type: 'POST'
+            , data: formData
+            , dataType: 'json'
+            , cache: false
+            , contentType: false
+            , processData: false
+            , success: function(response) {
+                console.log("success");
+                if (response.status == 1) {
+                    table.ajax.reload();
+                    $(modal).modal('hide');
                 }
-            });
-            return false;
-        }
+                toastr.success(response.msg);
+            }
+            , error: function(error) {
+                console.log("error");
+                $.each(error.responseJSON.errors, function(key, value) {
+                    $('#' + key + '-error').html(value);
+                });
+                toastr.error(error.responseJSON.errors);
+            }
+        });
 
-    </script>
+    });
+</script>
 @endsection

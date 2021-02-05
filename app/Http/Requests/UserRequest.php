@@ -26,6 +26,8 @@ class UserRequest extends FormRequest
         $rules = [
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'photo' => ['nullable', 'image', 'mimes:png,jpg,jpeg', 'max:8048'],
+            'city_id' => ['required', 'numeric', 'exists:cities,id'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
         ];
         if (request()->isMethod('put')) {

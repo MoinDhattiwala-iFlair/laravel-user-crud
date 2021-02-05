@@ -13,7 +13,11 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        /* View::composer(['settings.users.add'], function ($view) {
+    $view->with([
+    'countries' => Country::pluck('name', 'id'),
+    ]);
+    }); */
     }
 
     /**

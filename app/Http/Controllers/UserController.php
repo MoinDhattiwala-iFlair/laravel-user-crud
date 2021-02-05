@@ -4,8 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\UserRequest;
 use App\Models\User;
+use App\Services\UserService;
 use App\Services\UserServiceInterface;
-use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
@@ -22,9 +22,9 @@ class UserController extends Controller
      * @param UserServiceInterface $userService
      *
      */
-    public function __construct(UserServiceInterface $userService)
+    public function __construct()
     {
-        $this->userService = $userService;
+        $this->userService = new UserService;
     }
 
     /**
@@ -34,8 +34,10 @@ class UserController extends Controller
      */
     public function index()
     {
-        $users = $this->userService->getAll();
-        return view('settings.users.index', compact('users'));
+        if (request()->ajax()) {
+            return $this->userService->getDatatableData(request()->all());
+        }
+        return view('settings.users.index');
     }
 
     /**
@@ -104,6 +106,6 @@ class UserController extends Controller
      */
     public function destroy(User $user)
     {
-        //
+        return $this->userService->deleteUser($user);
     }
 }
