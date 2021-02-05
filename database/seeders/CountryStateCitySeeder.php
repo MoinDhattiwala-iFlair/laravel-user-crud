@@ -22,7 +22,7 @@ class CountryStateCitySeeder extends Seeder
 
     private function getCountrySql()
     {
-        return "INSERT INTO `countries` (`id`, `sortname`, `name`, `phonecode`)
+        return "INSERT INTO countries (id, sortname, name, phonecode)
                 VALUES
                     (1, 'AF', 'Afghanistan', 93),
                     (2, 'AL', 'Albania', 355),
@@ -273,7 +273,7 @@ class CountryStateCitySeeder extends Seeder
     }
     private function getStateSql()
     {
-        return "INSERT INTO `states` (`id`, `name`, `country_id`) VALUES
+        return "INSERT INTO states (id, name, country_id) VALUES
                 (1, 'Andaman and Nicobar Islands', 101),
                 (2, 'Andhra Pradesh', 101),
                 (3, 'Arunachal Pradesh', 101),
@@ -2446,7 +2446,7 @@ class CountryStateCitySeeder extends Seeder
                 (2179, 'Rivercess', 123),
                 (2180, 'Sinoe', 123),
                 (2181, 'Ajdabiya', 124);
-                INSERT INTO `states` (`id`, `name`, `country_id`) VALUES
+                INSERT INTO states (id, name, country_id) VALUES
                 (2182, 'Fezzan', 124),
                 (2183, 'Banghazi', 124),
                 (2184, 'Darnah', 124),
@@ -4369,7 +4369,7 @@ class CountryStateCitySeeder extends Seeder
     }
     private function getCitySql()
     {
-        return "INSERT INTO `cities` (`id`, `name`, `state_id`) VALUES
+        return "INSERT INTO cities (id, name, state_id) VALUES
                 (1, 'Bombuflat', 1),
                 (2, 'Garacharma', 1),
                 (3, 'Port Blair', 1),
@@ -6691,7 +6691,7 @@ class CountryStateCitySeeder extends Seeder
                 (2319, 'Mauganj', 21),
                 (2320, 'Meghnagar', 21),
                 (2321, 'Mehara Gaon', 21);
-                INSERT INTO `cities` (`id`, `name`, `state_id`) VALUES
+                INSERT INTO cities (id, name, state_id) VALUES
                 (2322, 'Mehgaon', 21),
                 (2323, 'Mhaugaon', 21),
                 (2324, 'Mhow', 21),
@@ -8849,7 +8849,7 @@ class CountryStateCitySeeder extends Seeder
                 (4476, 'Mandamarri', 36),
                 (4477, 'Manuguru', 36),
                 (4478, 'Medak', 36);
-                INSERT INTO `cities` (`id`, `name`, `state_id`) VALUES
+                INSERT INTO cities (id, name, state_id) VALUES
                 (4479, 'Medchal', 36),
                 (4480, 'Miryalaguda', 36),
                 (4481, 'Nagar Karnul', 36),
@@ -11000,7 +11000,7 @@ class CountryStateCitySeeder extends Seeder
                 (6626, 'Gladstone', 269),
                 (6627, 'Gold Coast', 269),
                 (6628, 'Gowrie Junction', 269);
-                INSERT INTO `cities` (`id`, `name`, `state_id`) VALUES
+                INSERT INTO cities (id, name, state_id) VALUES
                 (6629, 'Gympie', 269),
                 (6630, 'Helensvale', 269),
                 (6631, 'Hervey Bay', 269),
@@ -13093,7 +13093,7 @@ class CountryStateCitySeeder extends Seeder
                 (8718, 'Ibicarai', 516),
                 (8719, 'Ibicui', 516),
                 (8720, 'Ibipeba', 516);
-                INSERT INTO `cities` (`id`, `name`, `state_id`) VALUES
+                INSERT INTO cities (id, name, state_id) VALUES
                 (8721, 'Ibirapitanga', 516),
                 (8722, 'Ibirataia', 516),
                 (8723, 'Ibotirama', 516),
@@ -15091,7 +15091,7 @@ class CountryStateCitySeeder extends Seeder
                 (10715, 'Saint-Cesaire', 673),
                 (10716, 'Saint-Cyrill-de-Wendover', 673),
                 (10717, 'Saint-Damase', 673);
-                INSERT INTO `cities` (`id`, `name`, `state_id`) VALUES
+                INSERT INTO cities (id, name, state_id) VALUES
                 (10718, 'Saint-Damien-de-Buckland', 673),
                 (10719, 'Saint-Denis', 673),
                 (10720, 'Saint-Donat-de-Montcalm', 673),
@@ -16785,7 +16785,7 @@ class CountryStateCitySeeder extends Seeder
                 (12817, 'San Mateo', 781),
                 (12818, 'San Miguel de Sema', 781),
                 (12819, 'San Pablo de Borbur', 781);
-                INSERT INTO `cities` (`id`, `name`, `state_id`) VALUES
+                INSERT INTO cities (id, name, state_id) VALUES
                 (12820, 'Santa Maria', 781),
                 (12821, 'Santa Rosa de Viterbo', 781),
                 (12822, 'Santa Sofia', 781),
@@ -18815,7 +18815,7 @@ class CountryStateCitySeeder extends Seeder
                 (14846, 'Duchcov', 936),
                 (14847, 'Jilove', 936),
                 (14848, 'Jirkov', 936);
-                INSERT INTO `cities` (`id`, `name`, `state_id`) VALUES
+                INSERT INTO cities (id, name, state_id) VALUES
                 (14849, 'Kadan', 936),
                 (14850, 'Klasterec nad Ohri', 936),
                 (14851, 'Krupka', 936),
@@ -20876,7 +20876,7 @@ class CountryStateCitySeeder extends Seeder
                 (16906, 'Laukaa', 1161),
                 (16907, 'Lieto', 1161),
                 (16908, 'Anjalankoski', 1162);
-                INSERT INTO `cities` (`id`, `name`, `state_id`) VALUES
+                INSERT INTO cities (id, name, state_id) VALUES
                 (16909, 'Hamina', 1162),
                 (16910, 'Kotka', 1162),
                 (16911, 'Kouvola', 1162),
@@ -22718,7 +22718,7 @@ class CountryStateCitySeeder extends Seeder
                 (18747, 'Amberg', 1357),
                 (18748, 'Amerang', 1357),
                 (18749, 'Ansbach', 1357);
-                INSERT INTO `cities` (`id`, `name`, `state_id`) VALUES
+                INSERT INTO cities (id, name, state_id) VALUES
                 (18750, 'Aschaffenburg', 1357),
                 (18751, 'Augsburg', 1357),
                 (18752, 'Bad Aibling', 1357),
@@ -24647,7 +24647,7 @@ class CountryStateCitySeeder extends Seeder
                 (20675, 'Tasiusaq', 1491),
                 (20676, 'Upernavik', 1491),
                 (20677, 'Upernavik Kujalleq', 1491);
-                INSERT INTO `cities` (`id`, `name`, `state_id`) VALUES
+                INSERT INTO cities (id, name, state_id) VALUES
                 (20678, 'Ikerasak', 1492),
                 (20679, 'Illorsuit', 1492),
                 (20680, 'Niaqornat', 1492),
@@ -26006,7 +26006,7 @@ class CountryStateCitySeeder extends Seeder
                 (22033, 'Dimona', 1786),
                 (22034, 'Elat', 1786),
                 (22035, 'Gan Yavne', 1786),
-                (22036, 'Nahal `Oz', 1786),
+                (22036, 'Nahal Oz', 1786),
                 (22037, 'Netivot', 1786),
                 (22038, 'Ofaqim', 1786),
                 (22039, 'Qiryat Gat', 1786),
@@ -26558,7 +26558,7 @@ class CountryStateCitySeeder extends Seeder
                 (22585, 'Montazzoli', 1826),
                 (22586, 'Montebello sul Sangro', 1826),
                 (22587, 'Monteferrante', 1826);
-                INSERT INTO `cities` (`id`, `name`, `state_id`) VALUES
+                INSERT INTO cities (id, name, state_id) VALUES
                 (22588, 'Montelapiano', 1826),
                 (22589, 'Montenerodomo', 1826),
                 (22590, 'Monteodorisio', 1826),
@@ -28427,7 +28427,7 @@ class CountryStateCitySeeder extends Seeder
                 (24460, 'Ono', 1930),
                 (24461, 'Sanda', 1930),
                 (24462, 'Sasayama', 1930);
-                INSERT INTO `cities` (`id`, `name`, `state_id`) VALUES
+                INSERT INTO cities (id, name, state_id) VALUES
                 (24463, 'Sumoto', 1930),
                 (24464, 'Taishi', 1930),
                 (24465, 'Takarazuka', 1930),
@@ -30442,7 +30442,7 @@ class CountryStateCitySeeder extends Seeder
                 (26474, 'Olingen', 2236),
                 (26475, 'Rodenbourg', 2236),
                 (26476, 'Roodt-sur-Syr', 2236);
-                INSERT INTO `cities` (`id`, `name`, `state_id`) VALUES
+                INSERT INTO cities (id, name, state_id) VALUES
                 (26477, 'Wasserbillig', 2236),
                 (26478, 'Wecker', 2236),
                 (26479, 'Wecker-Gare', 2236),
@@ -32321,7 +32321,7 @@ class CountryStateCitySeeder extends Seeder
                 (28352, 'Temamatla', 2442),
                 (28353, 'Temascalapa', 2442),
                 (28354, 'Temascalcingo', 2442);
-                INSERT INTO `cities` (`id`, `name`, `state_id`) VALUES
+                INSERT INTO cities (id, name, state_id) VALUES
                 (28355, 'Temoaya', 2442),
                 (28356, 'Tenancingo', 2442),
                 (28357, 'Tenango de Arista', 2442),
@@ -34224,7 +34224,7 @@ class CountryStateCitySeeder extends Seeder
                 (30254, 'Wormerland', 2594),
                 (30255, 'Wormerveer', 2594),
                 (30256, 'Zaandam', 2594);
-                INSERT INTO `cities` (`id`, `name`, `state_id`) VALUES
+                INSERT INTO cities (id, name, state_id) VALUES
                 (30257, 'Zaanstad', 2594),
                 (30258, 'Zandvoort', 2594),
                 (30259, 'Zeevang', 2594),
@@ -36208,7 +36208,7 @@ class CountryStateCitySeeder extends Seeder
                 (32237, 'Bangued', 2844),
                 (32238, 'Davao', 2845),
                 (32239, 'Dagupan', 2848);
-                INSERT INTO `cities` (`id`, `name`, `state_id`) VALUES
+                INSERT INTO cities (id, name, state_id) VALUES
                 (32240, 'Laoag', 2848),
                 (32241, 'Manaoag', 2848),
                 (32242, 'Mangaldan', 2848),
@@ -38166,7 +38166,7 @@ class CountryStateCitySeeder extends Seeder
                 (34194, 'Bucsani', 2950),
                 (34195, 'Butimanu', 2950),
                 (34196, 'Candesti', 2950);
-                INSERT INTO `cities` (`id`, `name`, `state_id`) VALUES
+                INSERT INTO cities (id, name, state_id) VALUES
                 (34197, 'Ciocanesti', 2950),
                 (34198, 'Cobia', 2950),
                 (34199, 'Cojasca', 2950),
@@ -40133,7 +40133,7 @@ class CountryStateCitySeeder extends Seeder
                 (36160, 'Pochjop', 2986),
                 (36161, 'Pogar', 2986),
                 (36162, 'Selco', 2986);
-                INSERT INTO `cities` (`id`, `name`, `state_id`) VALUES
+                INSERT INTO cities (id, name, state_id) VALUES
                 (36163, 'Starodub', 2986),
                 (36164, 'Surazh', 2986),
                 (36165, 'Suzjomka', 2986),
@@ -42069,7 +42069,7 @@ class CountryStateCitySeeder extends Seeder
                 (38095, 'Soekmekaar', 3244),
                 (38096, 'Southdale', 3244),
                 (38097, 'Thabazimbi', 3244);
-                INSERT INTO `cities` (`id`, `name`, `state_id`) VALUES
+                INSERT INTO cities (id, name, state_id) VALUES
                 (38098, 'Thohoyandou', 3244),
                 (38099, 'Thulamahashe', 3244),
                 (38100, 'Tzaneen', 3244),
@@ -44000,7 +44000,7 @@ class CountryStateCitySeeder extends Seeder
                 (40025, 'Quballat', 3634),
                 (40026, 'Tabursuq', 3634),
                 (40027, 'Tastur', 3634);
-                INSERT INTO `cities` (`id`, `name`, `state_id`) VALUES
+                INSERT INTO cities (id, name, state_id) VALUES
                 (40028, 'Zahrat Madina', 3634),
                 (40029, 'al-Ma''qulah', 3634),
                 (40030, '''Awsajah', 3636),
@@ -45968,7 +45968,7 @@ class CountryStateCitySeeder extends Seeder
                 (41992, 'Westhoughton', 3842),
                 (41993, 'Weston-super-Mare', 3842),
                 (41994, 'Weymouth', 3842);
-                INSERT INTO `cities` (`id`, `name`, `state_id`) VALUES
+                INSERT INTO cities (id, name, state_id) VALUES
                 (41995, 'Whitefield', 3842),
                 (41996, 'Whitehaven', 3842),
                 (41997, 'Whitley Bay', 3842),
@@ -47852,7 +47852,7 @@ class CountryStateCitySeeder extends Seeder
                 (43875, 'Spring Hill', 3930),
                 (43876, 'Stuart', 3930),
                 (43877, 'Sun City Center', 3930);
-                INSERT INTO `cities` (`id`, `name`, `state_id`) VALUES
+                INSERT INTO cities (id, name, state_id) VALUES
                 (43878, 'Sunny Isles', 3930),
                 (43879, 'Sunrise', 3930),
                 (43880, 'Sunset', 3930),
@@ -49753,7 +49753,7 @@ class CountryStateCitySeeder extends Seeder
                 (45775, 'Springfield', 3959),
                 (45776, 'Steubenville', 3959),
                 (45777, 'Stow', 3959);
-                INSERT INTO `cities` (`id`, `name`, `state_id`) VALUES
+                INSERT INTO cities (id, name, state_id) VALUES
                 (45778, 'Streetsboro', 3959),
                 (45779, 'Strongsville', 3959),
                 (45780, 'Struthers', 3959),
@@ -51553,7 +51553,7 @@ class CountryStateCitySeeder extends Seeder
                 (47574, 'Redcliffe', 4120),
                 (47575, 'Shurugwi', 4120),
                 (47576, 'Zvishavane', 4120);
-                INSERT INTO `cities` (`id`, `name`, `state_id`) VALUES
+                INSERT INTO cities (id, name, state_id) VALUES
                 (47577, 'Manchester', 3952),
                 (47578, 'Nashua', 3952),
                 (47579, 'Concord', 3952),
@@ -52292,7 +52292,7 @@ class CountryStateCitySeeder extends Seeder
                 (48312, 'Lewisburg', 3976),
                 (48313, 'Ravenswood', 3976),
                 (48314, 'Summersville', 3976);
-                INSERT INTO `cities` (`id`, `name`, `state_id`) VALUES
+                INSERT INTO cities (id, name, state_id) VALUES
                 (48315,'Alcala',805),
                 (48316,'Andalucia',805),
                 (48317,'Ansermanuevo',805),
