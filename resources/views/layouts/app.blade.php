@@ -34,9 +34,11 @@
 
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <!-- Left Side Of Navbar -->
+                        @auth
                         <ul class="navbar-nav mr-auto">
                             <li><a href="{{ route('user.index') }}" class="nav-link">Users</a></li>
                         </ul>
+                        @endauth
 
                         <!-- Right Side Of Navbar -->
                         <ul class="navbar-nav ml-auto">
