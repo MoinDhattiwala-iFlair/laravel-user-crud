@@ -14,7 +14,7 @@ class CountryStateCitySeeder extends Seeder
      */
     public function run()
     {
-        DB::unprepared("SET GLOBAL max_allowed_packet=1073741824;");
+        //DB::unprepared("SET GLOBAL max_allowed_packet=1073741824;");
         DB::unprepared($this->getCountrySql());
         DB::unprepared($this->getStateSql());
         DB::unprepared($this->getCitySql());
