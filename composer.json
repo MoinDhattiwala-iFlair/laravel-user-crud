@@ -20,7 +20,8 @@
         "laravel/ui": "^3.1",
         "laravelcollective/html": "^6.2",
         "moindhattiwala/country_state_city": "^1.0",
-        "yajra/laravel-datatables-oracle": "~9.0"
+        "yajra/laravel-datatables-oracle": "~9.0",
+        "gd": "*",
     },
     "require-dev": {
         "facade/ignition": "^2.5",
